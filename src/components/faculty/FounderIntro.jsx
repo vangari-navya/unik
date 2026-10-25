@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Quote, Award, BookOpen } from 'lucide-react';
-import founderImg from "../../../dist/shyamSir.jpeg";
+import founderImg from "../../assets/faculty/shyamSir.jpeg";
 
 export default function FounderIntro({ id = 'founder' }) {
   return (

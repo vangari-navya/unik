@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 import FounderIntro from '../components/faculty/FounderIntro';
-import PrincipalIntro from "../../dist/shyamSir.jpeg";
 import NewFacultyHero from '../components/faculty/NewFacultyHero';
 import NewFacultyCard from '../components/faculty/NewFacultyCard';
 import NewFacultyModal from '../components/faculty/NewFacultyModal';
@@ -59,8 +58,6 @@ export default function FacultyPage({ onOpenEnquiry }) {
         </div>
       </section>
 
-      {/* Principal Introduction (Toward the End of Screen) */}
-      <PrincipalIntro />
 
       {/* Faculty Profile Spotlight Modal */}
       <NewFacultyModal
