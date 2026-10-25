@@ -1,0 +1,229 @@
+/* ==================================================
+   FRANCHISE SECTION STYLES
+   Using UNIK Website UI Colors, Tokens & Typography
+================================================== */
+
+.franchise-section {
+  position: relative;
+  padding: 5rem 0 6rem;
+  background: var(--bg-slate, #F8FAFC);
+  border-top: 1px solid var(--border-light, rgba(0, 71, 171, 0.08));
+  border-bottom: 1px solid var(--border-light, rgba(0, 71, 171, 0.08));
+}
+
+.franchise-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+/* 11 Franchise Cards Grid */
+.franchise-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+/* Franchise Card */
+.franchise-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl, 20px);
+  border: 1.5px solid rgba(0, 71, 171, 0.1);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm, 0 4px 14px rgba(0, 71, 171, 0.05));
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.franchise-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-deep-blue, #0047AB) 0%, var(--color-azure, #007FFF) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.franchise-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 127, 255, 0.35);
+  box-shadow: 0 16px 36px -8px rgba(0, 71, 171, 0.12);
+}
+
+.franchise-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Header */
+.franchise-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.franchise-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 71, 171, 0.08);
+  color: var(--color-deep-blue, #0047AB);
+  border: 1px solid rgba(0, 71, 171, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.franchise-card:hover .franchise-icon-box {
+  background: var(--color-deep-blue, #0047AB);
+  color: #FFFFFF;
+  border-color: var(--color-deep-blue, #0047AB);
+}
+
+.franchise-card-title-group {
+  flex: 1;
+}
+
+.franchise-category-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-golden-dark, #D49E00);
+  margin-bottom: 0.25rem;
+}
+
+.franchise-card-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-deep-blue, #0047AB);
+  margin: 0;
+}
+
+/* Card Points List */
+.franchise-points-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.franchise-point-item {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+}
+
+.franchise-point-bullet {
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-golden, #F7BA00);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .franchise-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .franchise-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* On mobile view, the scroller works horizontally instead of vertically */
+@media (max-width: 768px) {
+  .franchise-section {
+    padding: 3.5rem 0 4.5rem;
+    overflow-x: hidden;
+  }
+
+  .franchise-cards-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 1.25rem;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    gap: 1.15rem;
+    width: calc(100% + 2.5rem);
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: 0.5rem 1.25rem 1.5rem 1.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: #0066FF rgba(0, 102, 255, 0.08);
+  }
+
+  .franchise-cards-grid::-webkit-scrollbar {
+    height: 5px;
+    display: block;
+  }
+
+  .franchise-cards-grid::-webkit-scrollbar-track {
+    background: rgba(0, 71, 171, 0.06);
+    border-radius: 9999px;
+    margin: 0 1.25rem;
+  }
+
+  .franchise-cards-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #0066FF 0%, #007FFF 100%);
+    border-radius: 9999px;
+  }
+
+  .franchise-cards-grid::-webkit-scrollbar-thumb:hover {
+    background: #0052CC;
+  }
+
+  .franchise-cards-grid .franchise-card {
+    flex: 0 0 clamp(270px, 80vw, 320px);
+    width: clamp(270px, 80vw, 320px);
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    padding: 1.6rem 1.35rem;
+  }
+
+  .franchise-cards-grid::after {
+    content: '';
+    flex: 0 0 0.1px;
+    padding-right: 0.5rem;
+  }
+
+  .franchise-card:hover {
+    transform: none;
+  }
+
+  .franchise-card:active {
+    transform: scale(0.98);
+  }
+}

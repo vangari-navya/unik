@@ -1,0 +1,965 @@
+/* ==================================================
+   EXCELLENCE IN EDUCATION - UNIK DESIGN SYSTEM
+   Vision, Mission, and Values consistent with site-wide tokens
+================================================== */
+
+.excellence-section-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, var(--bg-slate) 0%, var(--bg-white) 35%, var(--bg-light-blue) 100%);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* Background Atmosphere */
+.excellence-ambient-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.excellence-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--color-azure-alpha-10) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 40%, transparent 80%);
+  opacity: 0.85;
+}
+
+.excellence-glow-orb {
+  position: absolute;
+  border-radius: var(--radius-pill);
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.excellence-glow-orb.top-left {
+  top: -80px;
+  left: -80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--color-azure-alpha-20) 0%, var(--color-deep-blue-alpha-10) 50%, transparent 75%);
+}
+
+.excellence-glow-orb.mid-right {
+  top: 40%;
+  right: -80px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, var(--color-azure-alpha-10) 0%, var(--color-deep-blue-alpha-10) 50%, transparent 75%);
+}
+
+.excellence-glow-orb.bottom-center {
+  bottom: -60px;
+  left: 30%;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, var(--color-golden-alpha-15) 0%, var(--color-azure-alpha-10) 60%, transparent 80%);
+}
+
+/* Master Container */
+.excellence-master-container {
+  width: 100%;
+  max-width: var(--container-max-width, 100%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header Shared */
+.values-title-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.values-block-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.values-block-subtext {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==================================================
+   1. OUR VISION: HORIZONTALLY CENTERED PROGRESSION
+   Nurturing Tomorrow's Global Citizens
+================================================== */
+.vision-editorial-composition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.vision-progression-column {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(0.5rem, 1.5vw, 1.5rem) 0;
+}
+
+.vision-progression-header {
+  margin-bottom: 2rem;
+}
+
+.vision-horizon-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-azure);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.vision-horizon-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 0.85rem;
+}
+
+.vision-narrative-paragraph {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Vertical Timeline Progression */
+.vision-vertical-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.85rem;
+  padding-left: 0.5rem;
+}
+
+.timeline-spine-track {
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 31px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-azure) 0%, rgba(0, 127, 255, 0.25) 70%, var(--color-golden) 100%);
+  pointer-events: none;
+}
+
+.timeline-progression-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.timeline-node-marker {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-white);
+  border: 2px solid var(--color-azure);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+}
+
+.timeline-progression-item:hover .timeline-node-marker {
+  transform: scale(1.12);
+  border-color: var(--color-golden);
+  box-shadow: var(--shadow-golden);
+  background: var(--color-deep-blue);
+}
+
+.timeline-node-num {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-deep-blue);
+  letter-spacing: -0.01em;
+  transition: color var(--transition-fast);
+}
+
+.timeline-progression-item:hover .timeline-node-num {
+  color: var(--color-golden-light);
+}
+
+.timeline-node-body {
+  flex: 1;
+  padding-top: 0.35rem;
+}
+
+.timeline-node-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+  font-weight: 700;
+  color: var(--text-deep);
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.timeline-node-desc {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==================================================
+   2. OUR MISSION: INTERACTIVE JOURNEY TIMELINE
+================================================== */
+.mission-journey-section {
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
+}
+
+/* Horizontal Milestone Stepper Track */
+.mission-timeline-stepper-track {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.mission-track-line {
+  position: absolute;
+  top: 38px;
+  left: 3%;
+  right: 3%;
+  height: 3px;
+  background: var(--color-deep-blue-alpha-10);
+  border-radius: var(--radius-pill);
+  z-index: 1;
+}
+
+.mission-track-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-azure) 0%, var(--color-golden) 100%);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mission-nodes-scroller {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mission-timeline-stepper-track {
+    overflow-x: auto;
+    padding-bottom: 1.25rem;
+    scrollbar-width: thin;
+  }
+
+  .mission-track-line {
+    display: none;
+  }
+
+  .mission-nodes-scroller {
+    display: flex;
+    min-width: 820px;
+    gap: 0.75rem;
+  }
+}
+
+.mission-milestone-node {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0.25rem;
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.mission-milestone-node:hover {
+  transform: translateY(-2px);
+}
+
+.milestone-indicator-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-white);
+  border: 2px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.75rem;
+  transition: all var(--transition-normal);
+}
+
+.milestone-number {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.mission-milestone-node:hover .milestone-indicator-circle {
+  border-color: var(--node-accent, var(--color-azure));
+}
+
+.mission-milestone-node:hover .milestone-number {
+  color: var(--node-accent, var(--color-azure));
+}
+
+.mission-milestone-node.active .milestone-indicator-circle {
+  background: var(--node-accent, var(--color-azure));
+  border-color: var(--node-accent, var(--color-azure));
+  box-shadow: var(--shadow-azure);
+  transform: scale(1.15);
+}
+
+.mission-milestone-node.active .milestone-number {
+  color: var(--text-white);
+}
+
+.milestone-active-glow-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--node-accent, var(--color-azure));
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.milestone-label-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.milestone-pillar-tag {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.mission-milestone-node.active .milestone-pillar-tag {
+  color: var(--node-accent, var(--color-azure));
+}
+
+.milestone-short-title {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 145px;
+}
+
+/* Large Editorial Pillar Showcase Stage */
+.mission-editorial-stage {
+  position: relative;
+  width: 100%;
+}
+
+.mission-spotlight-canvas {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  padding: clamp(2.25rem, 4vw, 3.25rem) clamp(1.5rem, 3vw, 2.5rem);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-spotlight-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-wing-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  color: var(--text-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.mission-wing-desc {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 680px;
+  text-align: center;
+}
+
+/* ==================================================
+   3. OUR CORE VALUES: "VALUES CONSTELLATION"
+================================================== */
+.values-constellation-section {
+  position: relative;
+  width: 100%;
+}
+
+.values-constellation-stage {
+  display: grid;
+  grid-template-columns: minmax(340px, 490px) 1fr;
+  gap: clamp(2rem, 4.5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .values-constellation-stage {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+/* Circular Values Constellation Orbit Container */
+.constellation-orbit-container {
+  position: relative;
+  width: 100%;
+  max-width: 510px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.constellation-celestial-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.constellation-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.constellation-spoke-line {
+  transition: all var(--transition-normal);
+}
+
+/* Central Nucleus */
+.constellation-center-nucleus {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  border-radius: var(--radius-pill);
+  background: radial-gradient(circle at 50% 35%, var(--bg-white) 0%, var(--bg-light-blue) 70%, var(--bg-tint-blue) 100%);
+  border: 2px solid var(--border-azure);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.nucleus-inner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nucleus-statement {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-deep);
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+/* 8 Constellation Planetary Letter Nodes */
+.constellation-nodes-ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+}
+
+.constellation-letter-node {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-pill);
+  background: var(--bg-white);
+  border: 2px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  z-index: 5;
+  transition: all var(--transition-normal);
+}
+
+.constellation-letter-glyph {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-deep-blue);
+  transition: color var(--transition-fast);
+}
+
+.constellation-node-tooltip {
+  position: absolute;
+  bottom: -24px;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-white);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: all var(--transition-fast);
+}
+
+.constellation-letter-node:hover .constellation-node-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.constellation-letter-node:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  border-color: var(--node-accent, var(--color-azure));
+}
+
+.constellation-letter-node:hover .constellation-letter-glyph {
+  color: var(--node-accent, var(--color-azure));
+}
+
+.constellation-letter-node.active {
+  background: var(--node-gradient, linear-gradient(135deg, var(--color-azure) 0%, var(--color-deep-blue) 100%));
+  border-color: var(--bg-white);
+  box-shadow: var(--shadow-azure);
+  transform: translate(-50%, -50%) scale(1.22);
+}
+
+.constellation-letter-node.active .constellation-letter-glyph {
+  color: var(--text-white);
+}
+
+.constellation-node-aura {
+  position: absolute;
+  inset: -8px;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--node-accent, var(--color-azure));
+  box-shadow: 0 0 18px var(--node-accent, rgba(0, 127, 255, 0.4));
+  pointer-events: none;
+}
+
+/* Selected Value Editorial Showcase */
+.constellation-spotlight-display {
+  width: 100%;
+}
+
+.value-editorial-canvas {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-xl);
+  padding: clamp(2.25rem, 4.5vw, 3.5rem);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.value-identity-headline-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.value-letter-crest {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-white);
+  box-shadow: var(--shadow-azure);
+  flex-shrink: 0;
+}
+
+.value-headings-group {
+  flex: 1;
+}
+
+.value-primary-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: var(--text-deep);
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.value-icon-orb-stage {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.value-narrative-box {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+.value-full-explanation {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 780px;
+}
+
+.value-editorial-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.value-quick-selector-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.value-chip-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-light-blue);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-deep-blue);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.value-chip-dot:hover {
+  background: var(--dot-color, var(--color-azure));
+  color: var(--text-white);
+  border-color: var(--dot-color, var(--color-azure));
+}
+
+.value-chip-dot.active {
+  background: var(--dot-color, var(--color-azure));
+  color: var(--text-white);
+  border-color: var(--dot-color, var(--color-azure));
+  box-shadow: var(--shadow-azure);
+  transform: scale(1.08);
+}
+
+/* ==================================================
+   RESPONSIVE REFINEMENTS
+================================================== */
+@media (max-width: 640px) {
+  .values-block-heading {
+    font-size: clamp(1.5rem, 5.5vw, 1.95rem);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+
+  .values-block-subtext {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .values-title-header {
+    margin-bottom: 2rem;
+  }
+
+  /* Mission Stepper Track & Nodes */
+  .mission-timeline-stepper-track {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mission-timeline-stepper-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mission-nodes-scroller {
+    display: flex;
+    min-width: max-content;
+    gap: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .mission-milestone-node {
+    flex: 0 0 120px;
+    width: 120px;
+    scroll-snap-align: center;
+    padding: 0.35rem 0.2rem;
+  }
+
+  .milestone-indicator-circle {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.45rem;
+  }
+
+  .milestone-number {
+    font-size: 0.95rem;
+  }
+
+  .milestone-short-title {
+    font-size: 0.82rem;
+    line-height: 1.28;
+    font-weight: 600;
+  }
+
+  /* Mission Active Card Showcase */
+  .mission-spotlight-canvas {
+    padding: 1.6rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .mission-wing-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+
+  .mission-wing-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Core Values Constellation Wheel */
+  .values-constellation-stage {
+    gap: 2.75rem;
+  }
+
+  .constellation-orbit-container {
+    max-width: min(280px, 78vw);
+    margin: 0 auto 1.5rem auto;
+    box-sizing: border-box;
+  }
+
+  .constellation-center-nucleus {
+    width: 58%;
+    height: 58%;
+    padding: 0.55rem;
+  }
+
+  .nucleus-statement {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .constellation-letter-node {
+    width: 36px;
+    height: 36px;
+  }
+
+  .constellation-letter-glyph {
+    font-size: 0.92rem;
+  }
+
+  .constellation-letter-node.active {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+
+  /* Core Values Active Card Showcase */
+  .value-editorial-canvas {
+    padding: 1.5rem 1.15rem;
+    border-radius: 18px;
+  }
+
+  .value-identity-headline-row {
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .value-icon-orb-stage {
+    display: none;
+  }
+
+  .value-primary-title {
+    font-size: 1.35rem;
+    line-height: 1.22;
+  }
+
+  .value-letter-crest {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .value-full-explanation {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .value-editorial-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .value-quick-selector-chips {
+    justify-content: center;
+    gap: 0.3rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .value-chip-dot {
+    width: clamp(28px, 7.5vw, 32px);
+    height: clamp(28px, 7.5vw, 32px);
+    font-size: 0.8rem;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 380px) {
+    .value-chip-dot {
+      width: 27px;
+      height: 27px;
+      font-size: 0.74rem;
+    }
+    .value-quick-selector-chips {
+      gap: 0.22rem;
+    }
+  }
+
+  /* Vision Timeline Progression on Mobile */
+  .timeline-progression-item {
+    gap: 0.85rem;
+  }
+
+  .timeline-node-marker {
+    width: 36px;
+    height: 36px;
+  }
+
+  .timeline-node-num {
+    font-size: 0.82rem;
+  }
+
+  .timeline-node-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-node-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+}

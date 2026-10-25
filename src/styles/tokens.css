@@ -1,0 +1,70 @@
+:root {
+  /* Brand Core Colors */
+  --color-azure: #007FFF;
+  --color-azure-light: #3399FF;
+  --color-azure-dark: #0066CC;
+  --color-azure-alpha-10: rgba(0, 127, 255, 0.1);
+  --color-azure-alpha-20: rgba(0, 127, 255, 0.2);
+
+  --color-deep-blue: #0047AB;
+  --color-deep-blue-dark: #052659;
+  --color-deep-blue-midnight: #031432;
+  --color-deep-blue-alpha-10: rgba(0, 71, 171, 0.1);
+
+  --color-golden: #F7BA00;
+  --color-golden-light: #FFCF33;
+  --color-golden-dark: #D49E00;
+  --color-golden-glow: rgba(247, 186, 0, 0.35);
+  --color-golden-alpha-15: rgba(247, 186, 0, 0.15);
+
+  /* Backgrounds */
+  --bg-white: #FFFFFF;
+  --bg-slate: #F8FAFC;
+  --bg-light-blue: #F0F7FF;
+  --bg-tint-blue: #E8F2FE;
+  --bg-dark-card: #0A224E;
+  --bg-dark-surface: #061838;
+
+  /* Typography Colors */
+  --text-primary: #0F172A;
+  --text-deep: #002D62;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --text-white: #FFFFFF;
+  --text-gold: #F7BA00;
+
+  /* Borders */
+  --border-light: rgba(0, 71, 171, 0.08);
+  --border-subtle: rgba(0, 71, 171, 0.15);
+  --border-azure: rgba(0, 127, 255, 0.35);
+  --border-golden: rgba(247, 186, 0, 0.45);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 71, 171, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(0, 71, 171, 0.08);
+  --shadow-lg: 0 16px 36px -8px rgba(0, 71, 171, 0.12);
+  --shadow-xl: 0 24px 48px -12px rgba(0, 71, 171, 0.18);
+  --shadow-azure: 0 8px 25px rgba(0, 127, 255, 0.28);
+  --shadow-golden: 0 8px 25px rgba(247, 186, 0, 0.28);
+
+  /* Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Container */
+  --container-max-width: 100%;
+  --container-padding: clamp(1.25rem, 3.5vw, 4.5rem);
+  --header-height: 80px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,297 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 10px);
+  padding-top: calc(var(--header-height) + 2.5rem);
+  padding-bottom: 4.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 85% 25%, rgba(0, 127, 255, 0.12) 0%, transparent 60%),
+              radial-gradient(circle at 10% 75%, rgba(247, 186, 0, 0.08) 0%, transparent 50%),
+              linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(2rem, 3.5vw, 5rem);
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--border-azure);
+  padding: 0.45rem 1.15rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(0, 71, 171, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.hero-pill-badge .sparkle {
+  color: var(--color-golden);
+  display: flex;
+}
+
+.hero-pill-badge span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-deep-blue);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 4.4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--color-deep-blue);
+  margin-bottom: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-title .highlight-azure {
+  color: var(--color-azure);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .highlight-gold {
+  color: #D49E00;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2.25rem;
+  max-width: 720px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+
+.hero-stats-quick {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.quick-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-deep-blue);
+  line-height: 1.1;
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+}
+
+.quick-stat-num .plus {
+  color: var(--color-golden);
+}
+
+.quick-stat-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* 3D Hero Visual Container */
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Background Ambient Orbs */
+.hero-ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-ambient-orb.orb-1 {
+  width: 420px;
+  height: 420px;
+  background: rgba(0, 127, 255, 0.12);
+  top: 10%;
+  right: 5%;
+}
+
+.hero-ambient-orb.orb-2 {
+  width: 320px;
+  height: 320px;
+  background: rgba(247, 186, 0, 0.1);
+  bottom: 10%;
+  left: 5%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-stats-quick {
+    justify-content: center;
+  }
+  .hero-visual-wrapper {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: calc(var(--header-height) + 1.25rem);
+    padding-bottom: 3.5rem;
+  }
+  .hero-badge-wrapper {
+    margin-bottom: 0.85rem;
+  }
+  .hero-pill-badge {
+    padding: 0.28rem 0.85rem !important;
+    gap: 0.4rem !important;
+  }
+  .hero-pill-badge span {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.04em !important;
+  }
+  .hero-pill-badge .sparkle svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+  .hero-title {
+    font-size: clamp(2.35rem, 7.8vw, 2.85rem) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 1.1rem !important;
+    letter-spacing: -0.035em !important;
+  }
+  .hero-description {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+  .hero-stats-quick {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+    padding-top: 1.25rem;
+    text-align: center;
+  }
+  .quick-stat-item {
+    align-items: center;
+  }
+  .quick-stat-num {
+    font-size: 1.55rem;
+    justify-content: center;
+  }
+  .quick-stat-label {
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+  .hero-visual-wrapper {
+    max-width: 320px;
+    padding: 0 0.5rem;
+  }
+
+  /* Floating honor badges in mobile */
+  .hero-floating-badge.hero-badge-top-left {
+    top: -10px !important;
+    left: 4px !important;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 12px !important;
+    gap: 0.55rem !important;
+    box-shadow: 0 10px 24px rgba(0, 71, 171, 0.16) !important;
+    max-width: 90% !important;
+  }
+
+  .hero-floating-badge.hero-badge-bottom-right {
+    bottom: -10px !important;
+    right: 4px !important;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 12px !important;
+    gap: 0.55rem !important;
+    box-shadow: 0 10px 24px rgba(247, 186, 0, 0.2) !important;
+    max-width: 90% !important;
+  }
+
+  .hero-floating-badge .badge-icon-box {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+  }
+
+  .hero-floating-badge .badge-icon-box svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .hero-floating-badge .badge-title {
+    font-size: 0.82rem !important;
+  }
+
+  .hero-floating-badge .badge-subtitle {
+    font-size: 0.68rem !important;
+  }
+}
